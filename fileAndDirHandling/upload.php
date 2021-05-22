@@ -25,7 +25,7 @@ if($_SERVER["REQUEST_METHOD"] === "POST") {
 	if(move_uploaded_file($file["tmp_name"], $dirUploads . DIRECTORY_SEPARATOR . $file["name"])) {
 		echo "Uploaded successfully!";
 	} else {
-		throw new Exception("Não foi possível realizar o upload!");
+		throw new Exception("It was not possible to upload the file!");
 	}
 }
 ?>
