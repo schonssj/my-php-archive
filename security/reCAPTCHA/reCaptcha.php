@@ -7,7 +7,7 @@
 </head>
 <body>
 	<form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
-		<div class="g-recaptcha" data-sitekey="6LeTzc8UAAAAAGf8vn1BqoW3BENNRoCqQ2avThCc"></div> <!-- reCAPTCHA div -->
+		<div class="g-recaptcha" data-sitekey="yourDataSiteKey"></div> <!-- reCAPTCHA div -->
 		<input type="email" name="email">
 		<input type="submit">
 	</form>
@@ -27,7 +27,7 @@ if(isset($_POST['email'])) {
 	// Defining the data to be posted in an HTTP "POST" operation
 	curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query(array(
 		// API secret key.
-		"secret"=>"6LeTzc8UAAAAAFVYerS32K05hTGdWg32vn9zkefe",
+		"secret"=>"yourSecretKey",
 		// Informing the type of response expected.
 		"response"=>$_POST["g-recaptcha-response"],
 		"remoteip"=>$_SERVER["REMOTE_ADDR"])
